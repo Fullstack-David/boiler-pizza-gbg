@@ -5,24 +5,22 @@ import MockData from "./components/MockData.vue";
 
 <template>
   <MockData />
-  <div class="flex flex-col min-h-screen">
+  <div class="app-container">
     <!-- Header -->
-    <header class="bg-gray-900 text-white p-6 shadow-md">
-      <div class="container mx-auto flex items-center justify-between">
-        <div class="flex items-center space-x-4">
-          <img
-            src="../src/assets/logo.png"
-            alt="Logo"
-            class="h-10 w-10 rounded-full"
-          />
-          <h1 class="text-2xl font-bold">Welcome to Slajs GBG</h1>
-        </div>
-        <nav class="flex space-x-8 text-sm">
-          <a href="#" class="hover:text-gray-400">Meny</a>
-          <a href="#" class="hover:text-gray-400">Kontakt</a>
-          <a href="#" class="hover:text-gray-400">Om oss</a>
-        </nav>
+    <header class="header-content">
+      <div class="logo-container">
+        <img
+          src="../src/assets/logo.png"
+          alt="Logo"
+          class="h-10 w-10 rounded-full"
+        />
       </div>
+      <h1 class="text-2xl font-bold">Welcome to Slajs GBG</h1>
+      <nav class="header-nav">
+        <a href="#">Meny</a>
+        <a href="#">Kontakt</a>
+        <a href="#">Om oss</a>
+      </nav>
     </header>
 
     <!-- Main Content -->
