@@ -26,7 +26,7 @@ export function useImageFix(menu){
     // }
     fixedMenu.value.filter(item => (item.type === 'drink' || item.type === 'salad') && item.imgUrl === 'no-image')
         .forEach(item => {
-            if(!(item.name in drinks) && !(item.name in salads)) console.log('Error!!')
+            if(!(item.name in drinks) && !(item.name in salads)) item.imgURl = 'mysterious_image'
             if(item.type === 'drink') item.imgUrl = drinks[item.name]
             else item.imgUrl = salads[item.name]         
         });

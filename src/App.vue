@@ -1,20 +1,19 @@
 <script setup>
-import FetchPizzaMenu from './components/FetchPizzaMenu.vue';
+import FetchPizzaMenu from "./components/FetchPizzaMenu.vue";
 import ProductList from "./components/ProductList.vue";
 import MockData from "./components/MockData.vue";
 import ProductComponent from './components/ProductComponent.vue';
 </script>
 
 <template>
-  <MockData />
   <div class="app-container">
     <!-- Header -->
     <header class="header-content">
       <div class="logo-container">
         <img
-        src="../src/assets/logo.png"
-        alt="Logo"
-        class="h-10 w-10 rounded-full"
+          src="../src/assets/logo.png"
+          alt="Logo"
+          class="h-10 w-10 rounded-full"
         />
       </div>
       <h1 class="text-2xl font-bold">Welcome to Slajs GBG</h1>
@@ -52,9 +51,3 @@ import ProductComponent from './components/ProductComponent.vue';
     </footer>
   </div>
 </template>
-
-
-
-<style>
-
-</style>
