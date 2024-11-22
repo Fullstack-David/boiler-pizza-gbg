@@ -16,6 +16,7 @@ const drinks = computed(() =>
 </script>
 
 <template>
+  <p v-if="loading">Loading...</p>
   <h3>Pizzor</h3>
   <div class="product-container">
     <div class="item-container" v-for="pizza in pizzas" :key="pizza.id">

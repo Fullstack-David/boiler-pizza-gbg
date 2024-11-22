@@ -1,6 +1,6 @@
 <script setup>
 import FetchPizzaMenu from "./components/FetchPizzaMenu.vue";
-import ProductComponent from './components/ProductComponent.vue';
+import ProductComponent from "./components/ProductComponent.vue";
 </script>
 
 <template>
@@ -28,7 +28,7 @@ import ProductComponent from './components/ProductComponent.vue';
         <h2 class="text-xl font-semibold mb-6 text-center">Vår Meny</h2>
       </div>
 
-       <ProductComponent/>
+      <ProductComponent />
       <!-- ################### Test fetch ################### -->
       <!-- <FetchPizzaMenu /> -->
       <!-- ################### Test fetch ################### -->
