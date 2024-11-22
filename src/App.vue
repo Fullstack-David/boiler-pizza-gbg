@@ -1,5 +1,3 @@
-<script setup></script>
-=======
 <script setup>
 import FetchPizzaMenu from "./components/FetchPizzaMenu.vue";
 import ProductList from "./components/ProductList.vue";
