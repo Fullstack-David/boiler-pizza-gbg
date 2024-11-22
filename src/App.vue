@@ -2,6 +2,7 @@
 import FetchPizzaMenu from "./components/FetchPizzaMenu.vue";
 import ProductList from "./components/ProductList.vue";
 import MockData from "./components/MockData.vue";
+import ProductComponent from './components/ProductComponent.vue';
 </script>
 
 <template>
@@ -30,6 +31,7 @@ import MockData from "./components/MockData.vue";
         <ProductList title="Våra Specialiteter" :products="MockData.name" />
       </div>
 
+       <ProductComponent/>
       <!-- ################### Test fetch ################### -->
       <!-- <FetchPizzaMenu /> -->
       <!-- ################### Test fetch ################### -->
