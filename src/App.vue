@@ -1,4 +1,10 @@
 <script setup></script>
+=======
+<script setup>
+import FetchPizzaMenu from "./components/FetchPizzaMenu.vue";
+import ProductList from "./components/ProductList.vue";
+import MockData from "./components/MockData.vue";
+</script>
 
 <template>
   <div class="app-container">
@@ -25,6 +31,10 @@
         <h2 class="text-xl font-semibold mb-6 text-center">Vår Meny</h2>
         <ProductList title="Våra Specialiteter" :products="MockData.name" />
       </div>
+
+      <!-- ################### Test fetch ################### -->
+      <FetchPizzaMenu />
+      <!-- ################### Test fetch ################### -->
     </main>
 
     <!-- Footer -->
@@ -41,4 +51,3 @@
     </footer>
   </div>
 </template>
-<style></style>
