@@ -1,11 +1,6 @@
-
-<script setup>
-import ProductList from "./components/ProductList.vue";
-import MockData from "./components/MockData.vue";
-</script>
+<script setup></script>
 
 <template>
-  <MockData />
   <div class="app-container">
     <!-- Header -->
     <header class="header-content">
@@ -45,15 +40,5 @@ import MockData from "./components/MockData.vue";
       </div>
     </footer>
   </div>
-
-
-
-
-
-</script>
-
-
-
-<style>
-
-</style>
+</template>
+<style></style>
