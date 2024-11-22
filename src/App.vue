@@ -1,19 +1,20 @@
+<script setup></script>
+=======
 <script setup>
-import FetchPizzaMenu from './components/FetchPizzaMenu.vue';
+import FetchPizzaMenu from "./components/FetchPizzaMenu.vue";
 import ProductList from "./components/ProductList.vue";
 import MockData from "./components/MockData.vue";
 </script>
 
 <template>
-  <MockData />
   <div class="app-container">
     <!-- Header -->
     <header class="header-content">
       <div class="logo-container">
         <img
-        src="../src/assets/logo.png"
-        alt="Logo"
-        class="h-10 w-10 rounded-full"
+          src="../src/assets/logo.png"
+          alt="Logo"
+          class="h-10 w-10 rounded-full"
         />
       </div>
       <h1 class="text-2xl font-bold">Welcome to Slajs GBG</h1>
@@ -34,7 +35,6 @@ import MockData from "./components/MockData.vue";
       <!-- ################### Test fetch ################### -->
       <FetchPizzaMenu />
       <!-- ################### Test fetch ################### -->
-
     </main>
 
     <!-- Footer -->
@@ -51,9 +51,3 @@ import MockData from "./components/MockData.vue";
     </footer>
   </div>
 </template>
-
-
-
-<style>
-
-</style>
