@@ -1,4 +1,5 @@
 import { ref, onMounted } from 'vue'
+import {useImageFix} from './useImageFix'
 
 export function useFetchMenu() {
   const menuItems = ref([])
@@ -21,6 +22,8 @@ export function useFetchMenu() {
       );
       const data = await response.json()
       menuItems.value = await data.items
+
+      menuItems.value = useImageFix(menuItems.value)
     } catch (err) {
       error.value = err ? err.message : 'Ett fel uppstod vid hämtning av menyn'
       console.error('Fel vid hämtning av meny: ', err)
@@ -37,6 +40,5 @@ export function useFetchMenu() {
     menuItems,
     loading,
     error,
-    fetchMenu
   }
 }

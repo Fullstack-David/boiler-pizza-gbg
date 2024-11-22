@@ -11,23 +11,13 @@ export function useImageFix(menu){
         'Italian salad': 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd',
         'Shrimp salad': 'https://images.unsplash.com/photo-1551248429-40975aa4de74'
     }
-
     const fixedMenu = ref(menu)
 
-    // for(item in menu){
-    //     if(item.type === 'drink' && item.imgUrl === 'no-image'){
-    //         item.imgUrl = drinks[item.name]
-    //     }
-    //     if(item.type === 'salad' && item.imgUrl === 'no-image'){
-    //         item.imgUrl = salads[item.name]
-    //     }
-    // }
-    fixedMenu.value.filter(item => (item.type === 'drink' || item.type === 'salad') && item.imgUrl === 'no-image')
+    fixedMenu.value.filter(item => (item.type === 'drink' || item.type === 'salad') && item.imgUrl.includes('no-image'))
         .forEach(item => {
             if(!(item.name in images)) item.imgURl = 'mysterious_image'
             else item.imgUrl = images[item.name]         
         });
 
-    console.log(fixedMenu.value)
     return fixedMenu.value
 }
