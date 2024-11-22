@@ -1,10 +1,14 @@
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
+import dotenv from 'dotenv'
+
+dotenv.config();
 
 export function useFetchMenu() {
   const menuItems = ref([])
   const loading = ref(false)
   const error = ref(null)
+  const apiKey = process.env.API_KEY_PIZZA_MENU || 'sp-B2mWxADrthdHqd22' // backup om inte .env filen fungerar/finns
 
   const fetchMenu = async () => {
     loading.value = true
@@ -14,7 +18,7 @@ export function useFetchMenu() {
       const response = await axios.get('http://slajs-assets.s3-website.eu-north-1.amazonaws.com/menu/',
         {
           headers: {
-            "x-zocom": "sp-B2mWxADrthdHqd22" // APIKEY
+            "x-zocom": apiKey
           }
         }
       )
