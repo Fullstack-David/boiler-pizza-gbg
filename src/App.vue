@@ -32,10 +32,10 @@ import ProductComponent from './components/ProductComponent.vue';
         <ProductList title="Våra Specialiteter" :products="MockData.name" />
       </div>
 
+       <ProductComponent/>
       <!-- ################### Test fetch ################### -->
       <FetchPizzaMenu />
       <!-- ################### Test fetch ################### -->
-
     </main>
 
     <!-- Footer -->
@@ -51,7 +51,6 @@ import ProductComponent from './components/ProductComponent.vue';
       </div>
     </footer>
   </div>
-  <ProductComponent/>
 </template>
 
 
