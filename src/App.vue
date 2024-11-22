@@ -31,8 +31,9 @@ import MockData from "./components/MockData.vue";
       </div>
 
       <!-- ################### Test fetch ################### -->
-      <FetchPizzaMenu />
+      <!-- <FetchPizzaMenu /> -->
       <!-- ################### Test fetch ################### -->
+       <ProductList/>
     </main>
 
     <!-- Footer -->
