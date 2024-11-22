@@ -1,3 +1,4 @@
+
 <script setup>
 import ProductList from "./components/ProductList.vue";
 import MockData from "./components/MockData.vue";
@@ -44,8 +45,15 @@ import MockData from "./components/MockData.vue";
       </div>
     </footer>
   </div>
-</template>
+
+
+
+
+
+</script>
+
+
 
 <style>
-/* Anpassade stilar om det behövs */
+
 </style>
