@@ -4,7 +4,7 @@ export function useFetchMenu() {
   const menuItems = ref([])
   const loading = ref(false)
   const error = ref(null)
-  const apiKey = import.meta.env.VITE_APP_API_KEY_PIZZA_MENU  // backup om inte .env filen fungerar/finns
+  const apiKey = import.meta.env.API_KEY_PIZZA_MENU  // backup om inte .env filen fungerar/finns
 
   const fetchMenu = async () => {
     loading.value = true
