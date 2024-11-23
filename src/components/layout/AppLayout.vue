@@ -1,7 +1,7 @@
 <script setup>
-import Header from "./Header.vue";
-import MainContent from "./MainContent.vue";
-import FooterApp from "./FooterApp.vue";
+import HeaderComponent from "./HeaderComponent.vue";
+import MainComponent from "./MainComponent.vue";
+import FooterComponent from "./FooterComponent.vue";
 import { defineProps } from "vue";
 
 // :propNamn="data"
@@ -30,13 +30,13 @@ defineProps({
 </script>
 
 <template>
-  <Header />
-  <MainContent
+  <HeaderComponent />
+  <MainComponent
     :pizzas="pizzas"
     :salads="salads"
     :drinks="drinks"
     :loading="loading"
     :error="error"
   />
-  <FooterApp />
+  <FooterComponent />
 </template>
