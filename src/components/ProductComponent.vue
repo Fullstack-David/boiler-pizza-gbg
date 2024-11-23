@@ -4,9 +4,15 @@ import { useFetchMenu } from "../shared/useFetchMenu.js";
 const { menuItems, loading, error } = useFetchMenu();
 
 // computes
-const pizzas = computed(() => menuItems.value.filter((item) => item.type === "pizza"));
-const salads = computed(() => menuItems.value.filter((item) => item.type === "salad"));
-const drinks = computed(() => menuItems.value.filter((item) => item.type === "drink"));
+const pizzas = computed(() =>
+  menuItems.value.filter((item) => item.type === "pizza")
+);
+const salads = computed(() =>
+  menuItems.value.filter((item) => item.type === "salad")
+);
+const drinks = computed(() =>
+  menuItems.value.filter((item) => item.type === "drink")
+);
 </script>
 
 <template>
@@ -25,7 +31,9 @@ const drinks = computed(() => menuItems.value.filter((item) => item.type === "dr
 
           <h5 v-if="pizza.toppings">Toppings:</h5>
           <ul v-if="pizza.toppings">
-            <li v-for="topping in pizza.toppings" :key="topping">{{ topping }}</li>
+            <li v-for="topping in pizza.toppings" :key="topping">
+              {{ topping }}
+            </li>
           </ul>
 
           <h5 v-if="pizza.ingredients">Ingredients:</h5>
@@ -49,7 +57,9 @@ const drinks = computed(() => menuItems.value.filter((item) => item.type === "dr
 
           <h5 v-if="salad.toppings">Toppings:</h5>
           <ul v-if="salad.toppings">
-            <li v-for="topping in salad.toppings" :key="topping">{{ topping }}</li>
+            <li v-for="topping in salad.toppings" :key="topping">
+              {{ topping }}
+            </li>
           </ul>
 
           <h5 v-if="salad.ingredients">Ingredients:</h5>
@@ -73,7 +83,9 @@ const drinks = computed(() => menuItems.value.filter((item) => item.type === "dr
 
           <h5 v-if="drink.toppings">Toppings:</h5>
           <ul v-if="drink.toppings">
-            <li v-for="topping in drink.toppings" :key="topping">{{ topping }}</li>
+            <li v-for="topping in drink.toppings" :key="topping">
+              {{ topping }}
+            </li>
           </ul>
 
           <h5 v-if="drink.ingredients">Ingredients:</h5>
@@ -90,7 +102,7 @@ const drinks = computed(() => menuItems.value.filter((item) => item.type === "dr
 </template>
 
 <style>
-.item-category {}
+/* .item-category {} */
 
 .product-container {
   display: grid;
