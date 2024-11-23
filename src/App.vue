@@ -48,15 +48,15 @@ const drinks = computed(() =>
             <div class="item-container" v-for="pizza in pizzas" :key="pizza.id">
               <h4>{{ pizza.id }}. {{ pizza.name }}</h4>
               <img :src="pizza.imgUrl" :alt="pizza.name" />
-              <p>Beskrivning {{ pizza.description }}</p>
-
-              <h5 v-if="pizza.toppings">Toppings:</h5>
-              <ul v-if="pizza.toppings">
-                <li v-for="topping in pizza.toppings" :key="topping">
-                  {{ topping }}
-                </li>
-              </ul>
-
+              <p><strong>Beskrivning:</strong> {{ pizza.description }}</p>
+              <div class="topping-section">
+                <h5 v-if="pizza.toppings"><strong>Toppings:</strong></h5>
+                <ul v-if="pizza.toppings">
+                  <li v-for="topping in pizza.toppings" :key="topping">
+                    {{ topping }}
+                  </li>
+                </ul>
+              </div>
               <h5 v-if="pizza.ingredients">Ingredients:</h5>
               <ul v-if="pizza.ingredients">
                 <li v-for="ingredient in pizza.ingredients" :key="ingredient">
@@ -75,21 +75,22 @@ const drinks = computed(() =>
             <div class="item-container" v-for="salad in salads" :key="salad.id">
               <h4>{{ salad.id }}. {{ salad.name }}</h4>
               <img :src="salad.imgUrl" :alt="salad.name" />
-              <p>Beskrivning {{ salad.description }}</p>
+              <p><strong>Beskrivning: </strong>{{ salad.description }}</p>
+              <div class="topping-section">
+                <h5 v-if="salad.toppings"><strong>Toppings:</strong></h5>
+                <ul v-if="salad.toppings">
+                  <li v-for="topping in salad.toppings" :key="topping">
+                    {{ topping }}
+                  </li>
+                </ul>
 
-              <h5 v-if="salad.toppings">Toppings:</h5>
-              <ul v-if="salad.toppings">
-                <li v-for="topping in salad.toppings" :key="topping">
-                  {{ topping }}
-                </li>
-              </ul>
-
-              <h5 v-if="salad.ingredients">Ingredients:</h5>
-              <ul v-if="salad.ingredients">
-                <li v-for="ingredient in salad.ingredients" :key="ingredient">
-                  {{ ingredient }}
-                </li>
-              </ul>
+                <h5 v-if="salad.ingredients">Ingredients:</h5>
+                <ul v-if="salad.ingredients">
+                  <li v-for="ingredient in salad.ingredients" :key="ingredient">
+                    {{ ingredient }}
+                  </li>
+                </ul>
+              </div>
               <h5>Pris {{ salad.price }} kr</h5>
             </div>
           </div>
@@ -102,21 +103,20 @@ const drinks = computed(() =>
             <div class="item-container" v-for="drink in drinks" :key="drink.id">
               <h4>{{ drink.id }}. {{ drink.name }}</h4>
               <img :src="drink.imgUrl" :alt="drink.name" />
-              <p>Beskrivning {{ drink.description }}</p>
-
-              <h5 v-if="drink.toppings">Toppings:</h5>
+              <p><strong>Beskrivning:</strong> {{ drink.description }}</p>
+              <h5 v-if="drink.toppings"><strong>Toppings:</strong></h5>
               <ul v-if="drink.toppings">
                 <li v-for="topping in drink.toppings" :key="topping">
                   {{ topping }}
                 </li>
               </ul>
-
               <h5 v-if="drink.ingredients">Ingredients:</h5>
               <ul v-if="drink.ingredients">
                 <li v-for="ingredient in drink.ingredients" :key="ingredient">
                   {{ ingredient }}
                 </li>
               </ul>
+
               <h5>Pris {{ drink.price }} kr</h5>
             </div>
           </div>
@@ -151,7 +151,7 @@ const drinks = computed(() =>
 }
 
 .item-container {
-  border: 2px solid yellow;
+  border: 1px solid grey;
   border-radius: 10px;
   margin-bottom: 8px;
   padding: 20px;
@@ -162,6 +162,7 @@ const drinks = computed(() =>
 
 .item-container img {
   width: 100%;
+  border-radius: 10px;
 }
 
 .item-container li {
