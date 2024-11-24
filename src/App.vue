@@ -1,30 +1,14 @@
 <script setup>
-import { computed } from "vue";
-import { useFetchMenu } from "./shared/useFetchMenu.js";
-import AppLayout from "./components/layout/AppLayout.vue";
-const { menuItems, loading, error } = useFetchMenu();
-
-// computes
-const pizzas = computed(() =>
-  menuItems.value.filter((item) => item.type === "pizza")
-);
-const salads = computed(() =>
-  menuItems.value.filter((item) => item.type === "salad")
-);
-const drinks = computed(() =>
-  menuItems.value.filter((item) => item.type === "drink")
-);
+import NavbarComponent from "./components/layout/NavbarComponent.vue";
+import FooterComponent from "./components/layout/FooterComponent.vue";
+import { RouterView } from "vue-router";
 </script>
 
 <template>
   <div class="app-container">
-    <AppLayout
-      :pizzas="pizzas"
-      :salads="salads"
-      :drinks="drinks"
-      :loading="loading"
-      :error="error"
-    />
+    <NavbarComponent />
+    <RouterView />
+    <FooterComponent />
   </div>
 </template>
 

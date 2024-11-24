@@ -1,28 +1,35 @@
 <script setup>
-import { defineProps } from "vue";
+import { computed, defineProps } from "vue";
+import { useFetchMenu } from "@/shared/useFetchMenu";
 // Med hjälp av defineProps deklarerar du vilka props komponenten tar emot
 defineProps({
   pizzas: {
     type: Array,
-    required: true,
   },
   salads: {
     type: Array,
-    required: true,
   },
   drinks: {
     type: Array,
-    required: true,
   },
   loading: {
     type: Boolean,
-    required: true,
   },
   error: {
     type: String,
-    required: false,
   },
 });
+const { menuItems, loading, error } = useFetchMenu();
+// computes
+const pizzas = computed(() =>
+  menuItems.value.filter((item) => item.type === "pizza")
+);
+const salads = computed(() =>
+  menuItems.value.filter((item) => item.type === "salad")
+);
+const drinks = computed(() =>
+  menuItems.value.filter((item) => item.type === "drink")
+);
 </script>
 <template>
   <main>
@@ -57,7 +64,6 @@ defineProps({
           </div>
         </div>
       </div>
-
       <!-- Salads -->
       <div class="item-category">
         <h3>Salader</h3>
@@ -106,7 +112,6 @@ defineProps({
                 {{ ingredient }}
               </li>
             </ul>
-
             <h5>Pris {{ drink.price }} kr</h5>
           </div>
         </div>
@@ -114,3 +119,12 @@ defineProps({
     </div>
   </main>
 </template>
+
+<style scoped>
+main {
+  flex-grow: 1;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+</style>

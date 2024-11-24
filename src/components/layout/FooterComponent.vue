@@ -11,3 +11,23 @@
     </div>
   </footer>
 </template>
+
+<style scoped>
+footer {
+  margin-bottom: 0;
+  background-color: #1a202c;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+footer a {
+  color: #f0a500;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+</style>
