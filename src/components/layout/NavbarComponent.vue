@@ -11,8 +11,8 @@ import { RouterLink } from "vue-router";
     <nav class="header-nav">
       <a href="#">Meny</a>
       <RouterLink to="/home">Home</RouterLink>
-      <RouterLink to="/contact">Kontakt</RouterLink>
       <RouterLink to="/about">Om Oss</RouterLink>
+      <RouterLink to="/contact">Kontakt</RouterLink>
     </nav>
   </header>
 </template>
