@@ -1,6 +1,6 @@
 <template>
-  <h1>About Us</h1>
   <div class="about-section">
+    <h1>About Us</h1>
     <p>
       Vi är en modern pizzeria i hjärtat av Göteborg som brinner för att erbjuda
       dig pizzor av högsta kvalitet. Med noggrant utvalda råvaror, spännande
@@ -21,7 +21,9 @@
   height: 100vh;
 }
 h1 {
-  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
 }
 .about-section p {
   margin: 1rem 0;
