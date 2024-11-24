@@ -1,8 +1,8 @@
 <script setup>
-import HeaderComponent from "./HeaderComponent.vue";
 import MainComponent from "./MainComponent.vue";
 import FooterComponent from "./FooterComponent.vue";
 import { defineProps } from "vue";
+import { RouterView } from "vue-router";
 
 // :propNamn="data"
 defineProps({
@@ -30,13 +30,14 @@ defineProps({
 </script>
 
 <template>
-  <HeaderComponent />
-  <MainComponent
-    :pizzas="pizzas"
-    :salads="salads"
-    :drinks="drinks"
-    :loading="loading"
-    :error="error"
-  />
-  <FooterComponent />
+  <main>
+    <!-- <router-view /> -->
+    <MainComponent
+      :pizzas="pizzas"
+      :salads="salads"
+      :drinks="drinks"
+      :loading="loading"
+      :error="error"
+    />
+  </main>
 </template>
