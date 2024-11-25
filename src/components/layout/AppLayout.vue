@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import MainComponent from "./MainComponent.vue";
 import FooterComponent from "./FooterComponent.vue";
 import { defineProps } from "vue";
@@ -31,7 +31,7 @@ defineProps({
 
 <template>
   <main>
-    <!-- <router-view /> -->
+    <router-view />
     <MainComponent
       :pizzas="pizzas"
       :salads="salads"
@@ -40,4 +40,4 @@ defineProps({
       :error="error"
     />
   </main>
-</template>
+</template> -->

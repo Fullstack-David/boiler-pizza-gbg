@@ -10,6 +10,7 @@ import { RouterLink } from "vue-router";
     <h1 class="">Welcome to Slajs GBG</h1>
     <nav class="header-nav">
       <a href="#">Meny</a>
+      <!-- RouterLink visar innehållet utan att ladda om sidan -->
       <RouterLink to="/home">Home</RouterLink>
       <RouterLink to="/about">Om Oss</RouterLink>
       <RouterLink to="/contact">Kontakt</RouterLink>

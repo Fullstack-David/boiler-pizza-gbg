@@ -7,6 +7,7 @@ import { RouterView } from "vue-router";
 <template>
   <div class="app-container">
     <NavbarComponent />
+    <!-- RouterView används av Vue Router för att visa innehållet för den aktuella routen. -->
     <RouterView />
     <FooterComponent />
   </div>
