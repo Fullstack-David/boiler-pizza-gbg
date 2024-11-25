@@ -1,25 +1,7 @@
 <script setup>
 import { computed, defineProps } from "vue";
 import { useFetchMenu } from "@/shared/useFetchMenu";
-// Med hjälp av defineProps deklarerar du vilka props komponenten tar emot
-// defineProps({
-//   pizzas: {
-//     type: Array,
-//     Required: true,
-//   },
-//   salads: {
-//     type: Array,
-//   },
-//   drinks: {
-//     type: Array,
-//   },
-//   loading: {
-//     type: Boolean,
-//   },
-//   error: {
-//     type: String,
-//   },
-// });
+
 const { menuItems, loading, error } = useFetchMenu();
 
 // computes
@@ -93,7 +75,6 @@ const drinks = computed(() =>
           </div>
         </div>
       </div>
-
       <!-- Drinks -->
       <div class="item-category">
         <h3>Drycker</h3>

@@ -1,4 +1,4 @@
-<!-- <script setup>
+<script setup>
 import { defineProps } from "vue";
 
 defineProps({
@@ -12,4 +12,4 @@ defineProps({
   <div class="item-container" style="background-color: lightblue">
     <slot></slot>
   </div>
-</template> -->
+</template>
