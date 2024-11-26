@@ -1,20 +1,15 @@
 <script setup>
-import { computed, defineProps } from "vue";
+import { computed } from "vue";
 import { useFetchMenu } from "@/shared/useFetchMenu";
 import CardComponent from "./CardComponent.vue";
 
 const { menuItems, loading, error } = useFetchMenu();
 
 // computes
-const pizzas = computed(() =>
-  menuItems.value.filter((item) => item.type === "pizza")
-);
-const salads = computed(() =>
-  menuItems.value.filter((item) => item.type === "salad")
-);
-const drinks = computed(() =>
-  menuItems.value.filter((item) => item.type === "drink")
-);
+const pizzas = computed(() =>menuItems.value.filter((item) => item.type === "pizza"));
+const salads = computed(() => menuItems.value.filter((item) => item.type === "salad"));
+const drinks = computed(() => menuItems.value.filter((item) => item.type === "drink"));
+
 </script>
 <template>
   <main>
