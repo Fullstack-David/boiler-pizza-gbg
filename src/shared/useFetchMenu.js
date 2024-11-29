@@ -6,7 +6,7 @@ export function useFetchMenu() {
   const loading = ref(false);
   const error = ref(null);
   const apiKey = import.meta.env.API_KEY_PIZZA_MENU; // backup om inte .env filen fungerar/finns
-  console.log(apiKey);
+  // console.log(apiKey);
 
   const fetchMenu = async () => {
     loading.value = true;
@@ -21,12 +21,12 @@ export function useFetchMenu() {
         }
       );
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       menuItems.value = await data.items;
       menuItems.value = useImageFix(menuItems.value);
     } catch (err) {
       error.value = err.message = "Ett fel uppstod vid hämtning av menyn..";
-      console.error("Error: ", err);
+      // console.error("Error: ", err);
     } finally {
       loading.value = false;
     }
