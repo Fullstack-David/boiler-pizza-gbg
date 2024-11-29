@@ -5,15 +5,19 @@ import { RouterLink } from "vue-router";
 <template>
   <header class="header-content">
     <div class="logo-container">
-      <img src="@/assets/logo.png" alt="Logo" class="h-10 w-10 rounded-full" />
+      <RouterLink to="/">
+        <img
+          src="@/assets/logo.png"
+          alt="Logo"
+          class="h-10 w-10 rounded-full"
+        />
+      </RouterLink>
     </div>
     <h1 class="">Welcome to Slajs GBG</h1>
     <nav class="header-nav">
-      <a href="#">Meny</a>
-
+      <RouterLink to="/">Meny</RouterLink>
       <RouterLink to="/orderHistory">Order History</RouterLink>
       <!-- RouterLink visar innehållet utan att ladda om sidan -->
-      <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/about">About us</RouterLink>
       <RouterLink to="/contact">Contact</RouterLink>
     </nav>

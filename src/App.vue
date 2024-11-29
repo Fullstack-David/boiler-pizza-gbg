@@ -9,7 +9,6 @@ import { RouterView } from "vue-router";
   <div class="app-container">
     <NavbarComponent />
 
-    <OrderHistory />
     <!-- RouterView används av Vue Router för att visa innehållet för den aktuella routen. -->
 
     <RouterView />
