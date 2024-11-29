@@ -1,7 +1,7 @@
 <script setup>
 import NavbarComponent from "./components/layout/NavbarComponent.vue";
 import FooterComponent from "./components/layout/FooterComponent.vue";
-import OrderHistory from "./components/layout/OrderHistory.vue";
+import OrderHistory from "./views/OrderHistory.vue";
 import { RouterView } from "vue-router";
 </script>
 
