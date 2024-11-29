@@ -11,7 +11,7 @@ import { RouterLink } from "vue-router";
     <nav class="header-nav">
       <a href="#">Meny</a>
       <!-- RouterLink visar innehållet utan att ladda om sidan -->
-      <RouterLink to="/home">Home</RouterLink>
+      <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/about">About us</RouterLink>
       <RouterLink to="/contact">Contact</RouterLink>
     </nav>
