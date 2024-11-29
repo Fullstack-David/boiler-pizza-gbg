@@ -7,20 +7,12 @@ import OrderHistory from "@/components/layout/OrderHistory.vue";
 const routes = [
   {
     path: "/",
-<<<<<<< HEAD
     component: HomeView,
   },
   {
     path: "/orderHistory",
     name: "orderHistory",
     component: OrderHistory,
-  },
-  {
-    path: "/home",
-=======
->>>>>>> main
-    name: "home",
-    component: HomeView,
   },
   {
     path: "/contact",

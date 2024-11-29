@@ -9,7 +9,7 @@ const props = defineProps({
 <template>
   <div class="product-container">
     <div class="item-container" v-for="item in list" :key="list.id">
-      <img :src="item.imgUrl" :alt="item.name" />
+      <img class="product-img" :src="item.imgUrl" :alt="item.name" />
       <div>
         <h4>{{ item.id }}. {{ item.name }}</h4>
         <p v-if="item.toppings" class="topping-name">{{ item.toppings.join(', ') }}</p>
@@ -17,7 +17,7 @@ const props = defineProps({
       </div>
       <div class="price-cart-container">
         <p>{{ item.price }}:-</p>
-        <i>icon</i>
+        <img class="add-to-cart-img" src="../../assets/add-to-cart.png" alt="add-to-cart">
       </div>
     </div>
   </div>
@@ -39,7 +39,7 @@ const props = defineProps({
   margin: 0;
 }
 
-.item-container img {
+.product-img {
   width: 5vh;
   height: 5vh;
   border-radius: 10px;
@@ -53,5 +53,14 @@ const props = defineProps({
 .price-cart-container {
   margin-left: auto;
   margin-right: 2px;
+}
+
+.add-to-cart-img {
+  width: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.add-to-cart-img:hover {
+  transform: scale(1.2) rotate(10deg);
 }
 </style>
