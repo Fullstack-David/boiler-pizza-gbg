@@ -10,8 +10,9 @@
       meet in a cozy environment. Welcome in for a slice you won't soon forget!
       Note: I translated "slajs" (which seems to be a Swedish slang/misspelling)
       as "slice" in the context of the pizza theme, maintaining the playful
-      spirit of the original text. 🍕
+      spirit of the original text.
     </p>
+    <img src="@/assets/pizza.png" alt="" />
   </div>
 </template>
 
@@ -22,6 +23,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 h1 {
   margin-bottom: 1.5rem;
@@ -29,14 +31,15 @@ h1 {
   color: #333;
 }
 .about-section p {
-  margin: 1rem 0;
-  max-width: 60%;
-  height: 50vh;
-
+  max-width: 80%;
   padding: 15px;
-  border-radius: 12px;
-  /* background-color: #f9f9f9; */
   line-height: 1.6;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-section img {
+  width: 800px;
+  height: 500px;
+  border-radius: 20px;
+  object-fit: cover;
 }
 </style>
