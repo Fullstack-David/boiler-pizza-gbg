@@ -2,13 +2,17 @@
   <div class="about-section">
     <h1>About Us</h1>
     <p>
-      Vi är en modern pizzeria i hjärtat av Göteborg som brinner för att erbjuda
-      dig pizzor av högsta kvalitet. Med noggrant utvalda råvaror, spännande
-      smakkombinationer och en passion för hantverket skapar vi en meny som har
-      något för alla – från klassiska favoriter till unika specialare. Hos oss
-      möts gemenskap och god mat i en trivsam miljö. Välkommen in för en slajs
-      du sent kommer glömma! 🍕
+      We are a modern pizzeria in the heart of Gothenburg that is passionate
+      about offering you pizzas of the highest quality. With carefully selected
+      ingredients, exciting flavor combinations, and a passion for
+      craftsmanship, we create a menu that has something for everyone – from
+      classic favorites to unique specialties. With us, community and good food
+      meet in a cozy environment. Welcome in for a slice you won't soon forget!
+      Note: I translated "slajs" (which seems to be a Swedish slang/misspelling)
+      as "slice" in the context of the pizza theme, maintaining the playful
+      spirit of the original text.
     </p>
+    <img src="@/assets/pizza.png" alt="" />
   </div>
 </template>
 
@@ -19,6 +23,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 h1 {
   margin-bottom: 1.5rem;
@@ -26,14 +31,15 @@ h1 {
   color: #333;
 }
 .about-section p {
-  margin: 1rem 0;
-  max-width: 60%;
-  height: 50vh;
-
+  max-width: 80%;
   padding: 15px;
-  border-radius: 12px;
-  /* background-color: #f9f9f9; */
   line-height: 1.6;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-section img {
+  width: 800px;
+  height: 500px;
+  border-radius: 20px;
+  object-fit: cover;
 }
 </style>

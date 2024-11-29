@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import AboutView from "@/views/AboutView.vue";
 import ContactView from "@/views/ContactView.vue";
 import HomeView from "@/views/HomeView.vue";
-import OrderHistory from "@/components/layout/OrderHistory.vue";
+import OrderHistory from "@/views/OrderHistory.vue";
 import Cart from "@/components/Cart.vue";
 
 const routes = [

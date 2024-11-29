@@ -15,9 +15,8 @@ import { RouterLink } from "vue-router";
     </div>
     <h1 class="">Welcome to Slajs GBG</h1>
     <nav class="header-nav">
-      <RouterLink to="/">Meny</RouterLink>
+      <RouterLink to="/">Menu</RouterLink>
       <RouterLink to="/orderHistory">Order History</RouterLink>
-      <!-- RouterLink visar innehållet utan att ladda om sidan -->
       <RouterLink to="/about">About us</RouterLink>
       <RouterLink to="/contact">Contact</RouterLink>
       <RouterLink to="/cart">Cart</RouterLink>
