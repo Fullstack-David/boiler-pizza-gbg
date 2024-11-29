@@ -20,6 +20,8 @@ import { RouterLink } from "vue-router";
       <!-- RouterLink visar innehållet utan att ladda om sidan -->
       <RouterLink to="/about">About us</RouterLink>
       <RouterLink to="/contact">Contact</RouterLink>
+      <RouterLink >Cart</RouterLink>
+      <!-- to="/cart" -->
     </nav>
   </header>
 </template>

@@ -1,9 +1,13 @@
 <script setup>
-import { defineProps } from "vue";
+import { defineProps, ref } from "vue";
 
 const props = defineProps({
   list: Array,
 });
+
+const cartItemsIds = ref([])
+const addItemId = ref()
+
 </script>
 
 <template>

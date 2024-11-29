@@ -24,7 +24,6 @@ const pizzaPercentage = computed(() => {
     <p v-if="loading">Loading...</p>
     <p v-if="error">{{ error }}</p>
 
-    <!-- CardComponent -->
     <div v-if="!loading && !error">
       <h3 class="category-header">Pizza</h3>
       <div class="item-category">
