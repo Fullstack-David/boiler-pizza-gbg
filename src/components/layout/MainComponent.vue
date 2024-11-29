@@ -10,6 +10,13 @@ const pizzas = computed(() => menuItems.value.filter((item) => item.type === "pi
 const salads = computed(() => menuItems.value.filter((item) => item.type === "salad"));
 const drinks = computed(() => menuItems.value.filter((item) => item.type === "drink"));
 
+// HÄR ÄR PROCENT-FUNKTIONEN, FÖR ATT ANVÄNDA DENNA FÖR ANDELEN BESTÄLLDA PIZZZOR/SALLADER SÅ BTT BARA UT ARRAYEN DEN KÖRS PÅ :-)
+const pizzaPercentage = computed(() => {
+  const total = menuItems.value.filter((item) => item.type === 'pizza' || item.type === 'salad').length
+  const part = menuItems.value.filter((item) => item.type === 'pizza').length;
+  return Math.round(part / total * 100)
+})
+
 </script>
 <template>
   <main>
