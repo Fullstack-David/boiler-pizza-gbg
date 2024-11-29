@@ -12,8 +12,8 @@ const drinks = computed(() => menuItems.value.filter((item) => item.type === "dr
 
 // HÄR ÄR PROCENT-FUNKTIONEN, FÖR ATT ANVÄNDA DENNA FÖR ANDELEN BESTÄLLDA PIZZZOR/SALLADER SÅ BTT BARA UT ARRAYEN DEN KÖRS PÅ :-)
 const pizzaPercentage = computed(() => {
-  const part = menuItems.value.filter((item) => item.type === 'pizza' || item.type === 'salad').length
-  const total = menuItems.value.filter((item) => item.type === 'pizza').length;
+  const total = menuItems.value.filter((item) => item.type === 'pizza' || item.type === 'salad').length
+  const part = menuItems.value.filter((item) => item.type === 'pizza').length;
   return Math.round(part / total * 100)
 })
 
@@ -32,7 +32,7 @@ const pizzaPercentage = computed(() => {
       </div>
 
       <div class="item-category">
-        <h3>Salad</h3>
+        <h3>Salad: {{ 100 - pizzaPercentage }} %</h3>
         <CardComponent :list="salads" />
       </div>
 
