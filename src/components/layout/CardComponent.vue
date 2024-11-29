@@ -1,13 +1,10 @@
 <script setup>
-import { defineProps, ref } from "vue";
+import { defineProps } from "vue";
+import { store } from "@/store/cart";
 
 const props = defineProps({
   list: Array,
 });
-
-const cartItemsIds = ref([])
-const addItemId = ref()
-
 </script>
 
 <template>
@@ -21,7 +18,7 @@ const addItemId = ref()
       </div>
       <div class="price-cart-container">
         <p>{{ item.price }}:-</p>
-        <img class="add-to-cart-img" src="../../assets/add-to-cart.png" alt="add-to-cart">
+        <img @click="store.addToCart(item)" class="add-to-cart-img" src="../../assets/add-to-cart.png" alt="add-to-cart">
       </div>
     </div>
   </div>
