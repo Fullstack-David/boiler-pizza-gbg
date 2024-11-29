@@ -31,11 +31,14 @@ const props = defineProps({
 }
 
 .item-container {
+  padding: .5rem;
+  padding-left: 0;
   border: 1px solid grey;
   border-radius: 10px;
   max-width: 100%;
   display: flex;
   flex-direction: row;
+  gap: 10px;
   margin: 0;
 }
 
@@ -62,5 +65,6 @@ const props = defineProps({
 
 .add-to-cart-img:hover {
   transform: scale(1.2) rotate(10deg);
+  cursor: pointer;
 }
 </style>
