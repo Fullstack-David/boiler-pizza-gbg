@@ -13,12 +13,10 @@ export function useFetchMenu() {
     error.value = null;
 
     try {
-      const response = await fetch(
-        "https://6ldruff9ul.execute-api.eu-north-1.amazonaws.com/menu",
+      const response = await fetch("https://6ldruff9ul.execute-api.eu-north-1.amazonaws.com/menu",
         {
           headers: {
             "x-zocom": apiKey,
-            // "x-zocom": "sp-435y45y3kle",
           },
         }
       );
