@@ -1,16 +1,13 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import { store } from "@/store/cart";
 </script>
 
 <template>
   <header class="header-content">
     <div class="logo-container">
       <RouterLink to="/">
-        <img
-          src="@/assets/logo.png"
-          alt="Logo"
-          class="h-10 w-10 rounded-full"
-        />
+        <img src="@/assets/logo.png" alt="Logo" class="h-10 w-10 rounded-full" />
       </RouterLink>
     </div>
     <h1 class="">Welcome to Slajs GBG</h1>
@@ -19,7 +16,7 @@ import { RouterLink } from "vue-router";
       <RouterLink to="/orderHistory">Order History</RouterLink>
       <RouterLink to="/about">About us</RouterLink>
       <RouterLink to="/contact">Contact</RouterLink>
-      <RouterLink to="/cart">Cart</RouterLink>
+      <RouterLink to="/cart">{{ store.cart.length < 1 ? 'Cart' : `Cart (${store.cart.length})` }}</RouterLink>
     </nav>
   </header>
 </template>
@@ -28,6 +25,7 @@ import { RouterLink } from "vue-router";
 .logo-container {
   display: flex;
 }
+
 header {
   background-color: black;
   color: #fff;
@@ -78,17 +76,20 @@ header nav a:hover {
   }
 
   .header-content h1 {
-    font-size: 20px; /* Minska textstorlek */
+    font-size: 20px;
+    /* Minska textstorlek */
     margin: 10px 0;
   }
 
   .header-nav {
-    flex-direction: row; /* Placera länkar i en vertikal lista */
+    flex-direction: row;
+    /* Placera länkar i en vertikal lista */
     gap: 10px;
   }
 
   .header-nav a {
-    font-size: 16px; /* Anpassa länkstorleken */
+    font-size: 16px;
+    /* Anpassa länkstorleken */
   }
 }
 </style>
