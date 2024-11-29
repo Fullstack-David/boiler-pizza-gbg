@@ -7,6 +7,7 @@ import OrderHistory from "@/components/layout/OrderHistory.vue";
 const routes = [
   {
     path: "/",
+<<<<<<< HEAD
     component: HomeView,
   },
   {
@@ -16,6 +17,8 @@ const routes = [
   },
   {
     path: "/home",
+=======
+>>>>>>> main
     name: "home",
     component: HomeView,
   },
