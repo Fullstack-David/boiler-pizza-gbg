@@ -6,21 +6,16 @@ function handleSubmit() {
 
 <template>
   <div class="contact-form">
-    <h1>Kontakta Oss</h1>
+    <h1>Contact Us</h1>
     <form @submit.prevent="handleSubmit">
       <div class="form-group">
         <label for="name">Namn</label>
-        <input type="text" id="name" placeholder="Ditt namn" required />
+        <input type="text" id="name" placeholder="name..." required />
       </div>
 
       <div class="form-group">
         <label for="email">E-post</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="Din e-postadress"
-          required
-        />
+        <input type="email" id="email" placeholder="email adress..." required />
       </div>
 
       <div class="form-group">
@@ -28,12 +23,12 @@ function handleSubmit() {
         <textarea
           id="message"
           rows="5"
-          placeholder="Ditt meddelande"
+          placeholder="message..."
           required
         ></textarea>
       </div>
 
-      <button type="submit">Skicka</button>
+      <button type="submit">Send</button>
     </form>
   </div>
 </template>

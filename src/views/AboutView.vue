@@ -2,12 +2,15 @@
   <div class="about-section">
     <h1>About Us</h1>
     <p>
-      Vi är en modern pizzeria i hjärtat av Göteborg som brinner för att erbjuda
-      dig pizzor av högsta kvalitet. Med noggrant utvalda råvaror, spännande
-      smakkombinationer och en passion för hantverket skapar vi en meny som har
-      något för alla – från klassiska favoriter till unika specialare. Hos oss
-      möts gemenskap och god mat i en trivsam miljö. Välkommen in för en slajs
-      du sent kommer glömma! 🍕
+      We are a modern pizzeria in the heart of Gothenburg that is passionate
+      about offering you pizzas of the highest quality. With carefully selected
+      ingredients, exciting flavor combinations, and a passion for
+      craftsmanship, we create a menu that has something for everyone – from
+      classic favorites to unique specialties. With us, community and good food
+      meet in a cozy environment. Welcome in for a slice you won't soon forget!
+      Note: I translated "slajs" (which seems to be a Swedish slang/misspelling)
+      as "slice" in the context of the pizza theme, maintaining the playful
+      spirit of the original text. 🍕
     </p>
   </div>
 </template>
