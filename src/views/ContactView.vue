@@ -1,3 +1,9 @@
+<script setup>
+function handleSubmit() {
+  alert("Tack för ditt meddelande! Vi återkommer så snart som möjligt.");
+}
+</script>
+
 <template>
   <div class="contact-form">
     <h1>Kontakta Oss</h1>
@@ -31,12 +37,6 @@
     </form>
   </div>
 </template>
-
-<script setup>
-function handleSubmit() {
-  alert("Tack för ditt meddelande! Vi återkommer så snart som möjligt.");
-}
-</script>
 
 <style scoped>
 .contact-form {

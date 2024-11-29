@@ -8,36 +8,13 @@ import { RouterView } from "vue-router";
 <template>
   <div class="app-container">
     <NavbarComponent />
+
     <OrderHistory />
+
     <RouterView />
     <FooterComponent />
   </div>
 </template>
 
 <style>
-.product-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
-  padding: 20px;
-}
-
-.item-container {
-  border: 1px solid grey;
-  border-radius: 10px;
-  margin-bottom: 8px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.item-container img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.item-container li {
-  list-style-type: none;
-}
 </style>

@@ -7,6 +7,7 @@ import OrderHistory from "@/components/layout/OrderHistory.vue";
 const routes = [
   {
     path: "/",
+
     component: HomeView,
   },
   {
@@ -16,6 +17,7 @@ const routes = [
   },
   {
     path: "/home",
+
     name: "home",
     component: HomeView,
   },
