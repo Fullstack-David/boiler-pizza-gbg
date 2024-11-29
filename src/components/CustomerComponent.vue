@@ -2,20 +2,21 @@
 import { reactive, ref } from 'vue';
 import { useFetchMenu } from '@/shared/useFetchMenu';
 
+
 // hämta menuItems och tillgång till datan
 const { menuItems, loading, error } = useFetchMenu();
 
 const cartItems = reactive([]);
 
 // Lägg till produkt till en kunds beställning
-function addToCart(itemId) {
-    const item = menuItems.value.find(item => item.id === itemId);
-    if (item) {
-        cartItems.push({ id: item.id, name: item.name, price: item.price });
-    } else {
-        console.warn(`Produkt med ID ${itemId} hittades inte`);
-    }
-}
+// function addToCart(itemId) {
+//     const item = menuItems.value.find(item => item.id === itemId);
+//     if (item) {
+//         cartItems.push({ id: item.id, name: item.name, price: item.price });
+//     } else {
+//         console.warn(`Produkt med ID ${itemId} hittades inte`);
+//     }
+// }
 
 // funktion för att ta bort en produkt från kunds aktuella beställning
 function removeFromCart(itemId) {

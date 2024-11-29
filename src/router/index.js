@@ -2,12 +2,18 @@ import { createRouter, createWebHistory } from "vue-router";
 import AboutView from "@/views/AboutView.vue";
 import ContactView from "@/views/ContactView.vue";
 import HomeView from "@/views/HomeView.vue";
+import OrderHistory from "@/views/OrderHistory.vue";
+import Cart from "@/components/Cart.vue";
 
 const routes = [
   {
     path: "/",
-    name: "home",
     component: HomeView,
+  },
+  {
+    path: "/orderHistory",
+    name: "orderHistory",
+    component: OrderHistory,
   },
   {
     path: "/contact",
@@ -18,6 +24,11 @@ const routes = [
     path: "/about",
     name: "about",
     component: AboutView,
+  },
+  {
+    path: "/cart",
+    name: "cart",
+    component: Cart,
   },
 ];
 
