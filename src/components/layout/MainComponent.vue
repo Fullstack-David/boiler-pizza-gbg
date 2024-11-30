@@ -1,41 +1,42 @@
 <script setup>
 import { computed } from "vue";
 import { useFetchMenu } from "@/shared/useFetchMenu";
-import CardComponent from "./CardComponent.vue";
+import Menu from "./Menu.vue";
 
 const { menuItems, loading, error } = useFetchMenu();
 
 // computes
-const pizzas = computed(() =>menuItems.value.filter((item) => item.type === "pizza"));
+const pizzas = computed(() => menuItems.value.filter((item) => item.type === "pizza"));
 const salads = computed(() => menuItems.value.filter((item) => item.type === "salad"));
 const drinks = computed(() => menuItems.value.filter((item) => item.type === "drink"));
-
 </script>
+
 <template>
   <main>
     <h2>Meny</h2>
     <p v-if="loading">Loading...</p>
     <p v-if="error">{{ error }}</p>
 
-    <!-- CardComponent -->
+    <!-- Menu components -->
     <div v-if="!loading && !error">
-      <h3>Pizza</h3>
-      <div class="item-category">
-        <CardComponent :list="pizzas" />
-      </div>
+      <section class="item-category">
+        <h3>Pizza</h3>
+        <Menu :list="pizzas" />
+      </section>
 
-      <div class="item-category">
-        <h3>Salad</h3>
-        <CardComponent :list="salads" />
-      </div>
+      <section class="item-category">
+        <h3>Sallad</h3>
+        <Menu :list="salads" />
+      </section>
 
-      <div class="item-category">
-        <h3>Drink</h3>
-        <CardComponent :list="drinks" />
-      </div>
+      <section class="item-category">
+        <h3>Dryck</h3>
+        <Menu :list="drinks" />
+      </section>
     </div>
   </main>
 </template>
+
 
 <style scoped>
 main {
@@ -44,7 +45,19 @@ main {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 h2 {
   text-align: center;
+  margin-bottom: 1rem;
 }
-</style>
+
+.item-category {
+  margin-bottom: 2rem;
+}
+
+h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+</style>              
