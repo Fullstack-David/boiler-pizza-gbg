@@ -13,20 +13,14 @@ export function useFetchMenu() {
     error.value = null;
 
     try {
-      const response = await fetch("https://6ldruff9ul.execute-api.eu-north-1.amazonaws.com/menu",
-        {
-          headers: {
-            "x-zocom": apiKey,
-          },
-        }
-      );
+      // Fetcha locala menuData.json fil från public mappen
+      const response = await fetch("/menuData.json");
       const data = await response.json();
-      // console.log(data);
-      menuItems.value = await data.items;
-      menuItems.value = useImageFix(menuItems.value);
+      menuItems.value = data.items;
+      menuItems.value = useImageFix(menuItems.value); 
     } catch (err) {
-      error.value = err.message = "Ett fel uppstod vid hämtning av menyn..";
-      // console.error("Error: ", err);
+      error.value = "Ett fel uppstod vid hämtning av menyn..";
+      console.error("Error: ", err);
     } finally {
       loading.value = false;
     }

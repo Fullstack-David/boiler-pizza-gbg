@@ -1,0 +1,311 @@
+{
+    "items": [
+      {
+        "id": 1,
+        "name": "Margherita",
+        "type": "pizza",
+        "description": "Pizza ipsum dolor amet chicken wing meat lovers party, extra sauce pizza roll melted cheese bbq sauce white pizza.",
+        "toppings": ["tomato sauce", "mozzarella"],
+        "price": 99,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/margherita.png",
+        "allergens": ["Gluten", "Laktos"]
+      },
+      {
+        "id": 2,
+        "name": "Capricciosa",
+        "type": "pizza",
+        "description": "Lasagna ricotta pepperoni, melted cheese pan chicken wing mayo meatball pie bbq rib personal party ranch extra cheese.",
+        "toppings": ["tomato sauce", "mozzarella", "ham", "champinjons"],
+        "price": 99,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/capricciosa.png",
+        "allergens": ["Gluten", "Laktos"]
+      },
+      {
+        "id": 3,
+        "name": "Hawaii",
+        "type": "pizza",
+        "description": "Anchovies white garlic hawaiian, personal bacon meatball bbq sauce pizza broccoli pork meatball pineapple banana peppers melted cheese red onions.",
+        "toppings": ["tomato sauce", "mozzarella", "ham", "pineapple"],
+        "price": 99,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/hawaii.png",
+        "allergens": ["Gluten", "Laktos"]
+      },
+      {
+        "id": 4,
+        "name": "Parma",
+        "type": "pizza",
+        "description": "Large banana peppers lasagna pesto pepperoni stuffed parmesan, sausage chicken wing.",
+        "toppings": ["tomato sauce", "mozzarella", "parma", "ruccola"],
+        "price": 129,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/parma.png",
+        "allergens": ["Gluten", "Laktos"]
+      },
+      {
+        "id": 5,
+        "name": "Fruity",
+        "type": "pizza",
+        "description": "Melted cheese peppers bacon chicken wing pepperoni mushrooms garlic sauce hawaiian deep crust.",
+        "toppings": ["tomato sauce", "mozzarella", "pineapple", "banana", "chilli"],
+        "price": 129,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/fruity.png",
+        "allergens": ["Gluten", "Laktos"]
+      },
+      {
+        "id": 6,
+        "name": "Romana",
+        "type": "pizza",
+        "description": "NY style green bell peppers philly steak, hawaiian garlic sauce pork bbq rib deep crust chicken peppers garlic red onions bacon & tomato hand tossed.",
+        "toppings": ["tomato sauce", "mozzarella", "ham", "pork filét", "fresh tomato", "garlic"],
+        "price": 139,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/romana.png",
+        "allergens": ["Gluten", "Laktos"]
+      },
+      {
+        "id": 7,
+        "name": "Laguna",
+        "type": "pizza",
+        "description": "Pie mushrooms Chicago style mozzarella, pesto sausage garlic bianca ricotta white pizza burnt mouth.",
+        "toppings": ["tomato sauce", "mozzarella", "ham", "shrimps", "bell pepper"],
+        "price": 99,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/laguna.png",
+        "allergens": ["Gluten", "Laktos", "Skaldjur"]
+      },
+      {
+        "id": 8,
+        "name": "Kebab pizza",
+        "type": "pizza",
+        "description": "Pizza roll marinara bacon, onions pie chicken parmesan.",
+        "toppings": [
+            "tomato sauce",
+            "mozzarella",
+            "kebab",
+            "fresh tomato",
+            "red onion",
+            "pepperoni"
+        ],
+        "price": 139,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/kebab-pizza.png",
+        "allergens": ["Gluten", "Laktos"]
+    },
+    {
+        "id": 9,
+        "name": "Bacon deluxe",
+        "type": "pizza",
+        "description": "Lasagna broccoli pie sausage. Chicken wing sausage steak, thin crust pepperoni philly chicken deep crust pesto stuffed crust green bell peppers extra sauce bbq rib ranch garlic sauce.",
+        "toppings": [
+            "tomato sauce",
+            "mozzarella",
+            "bacon",
+            "ruccula",
+            "olives",
+            "garlic"
+        ],
+        "price": 139,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/bacon-deluxe.png",
+        "allergens": ["Gluten", "Laktos"]
+    },
+    {
+        "id": 10,
+        "name": "Hot chicken",
+        "type": "pizza",
+        "description": "Bbq rib bacon hand tossed sausage bbq sauce stuffed crust pork white garlic ricotta lasagna green bell peppers mozzarella.",
+        "toppings": [
+            "tomato sauce",
+            "mozzarella",
+            "chicken",
+            "olive",
+            "fresh chili",
+            "basil"
+        ],
+        "price": 139,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/hot-chicken.png",
+        "allergens": ["Gluten", "Laktos"]
+    },
+    {
+        "id": 11,
+        "name": "Florida",
+        "type": "pizza",
+        "description": "Green bell peppers onions bbq sauce, spinach thin crust ranch ricotta NY style white pizza pepperoni.",
+        "toppings": [
+            "tomato sauce",
+            "mozzarella",
+            "ham",
+            "pineapple",
+            "shrimps",
+            "chili"
+        ],
+        "price": 139,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/florida.png",
+        "allergens": ["Gluten", "Laktos", "Skaldjur"]
+    },
+    {
+        "id": 12,
+        "name": "Galgamesh",
+        "type": "pizza",
+        "description": "Philly chicken marinara onions pepperoni lasagna. NY style sausage chicken, hawaiian bbq rib Chicago style bacon & tomato.",
+        "toppings": [
+            "tomato sauce",
+            "mozzarella",
+            "ox filet",
+            "pepper",
+            "basil",
+            "peperoni"
+        ],
+        "price": 139,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/galgamesh.png",
+        "allergens": ["Gluten", "Laktos"]
+    },
+    {
+        "id": 13,
+        "name": "Vagabond",
+        "type": "pizza",
+        "description": "Ranch mushrooms sausage pepperoni platter white pizza.",
+        "toppings": [
+            "tomato sauce",
+            "mozzarella",
+            "ox filet",
+            "egg",
+            "basil"
+        ],
+        "price": 99,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/vagabond.png",
+        "allergens": ["Gluten", "Laktos", "Ägg"]
+    },
+    {
+        "id": 14,
+        "name": "Super",
+        "type": "pizza",
+        "description": "Personal thin crust chicken wing pepperoni mayo sausage steak chicken wing philly chicken ham pork meat lovers meatball chicken.",
+        "toppings": [
+            "tomato sauce",
+            "mozzarella",
+            "bacon",
+            "basil"
+        ],
+        "price": 129,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/super.png",
+        "allergens": ["Gluten", "Laktos"]
+    },
+    {
+        "id": 15,
+        "name": "Stallone",
+        "type": "pizza",
+        "description": "Mushrooms garlic sauce pizza roll lasagna personal bianca peppers garlic pineapple melted cheese.",
+        "toppings": [
+            "tomato sauce",
+            "mozzarella",
+            "salami",
+            "ruccula",
+            "olive"
+        ],
+        "price": 149,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/stallone.png",
+        "allergens": ["Gluten", "Laktos"]
+    },
+    {
+        "id": 16,
+        "name": "Tabula rasa",
+        "type": "pizza",
+        "description": "White pizza pan mayo, hawaiian platter party bbq sauce philly steak. Broccoli lasagna melted cheese peppers, pineapple hand tossed meatball beef marinara.",
+        "toppings": [
+            "mozzarella"
+        ],
+        "price": 99,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/tabula-rasa.png",
+        "allergens": ["Laktos"]
+    },
+      {
+        "id": 17,
+        "name": "Greek salad",
+        "type": "salad",
+        "description": "White pizza pan mayo, hawaiian platter party bbq sauce philly steak.",
+        "ingredients": ["sliced cucumbers", "tomatoes", "green bell pepper", "red onion", "olives", "feta cheese", "olive oil"],
+        "price": 139,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/no-image.png",
+        "allergens": ["Laktos"]
+      },
+      {
+        "id": 18,
+        "name": "Caesar salad",
+        "type": "salad",
+        "description": "White pizza pan mayo, hawaiian platter party bbq sauce philly steak.",
+        "ingredients": ["romaine lettuce", "tomatoes", "red onion", "croutons", "parmesan cheese", "bacon", "chicken", "caesar dressing"],
+        "price": 139,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/no-image.png",
+        "allergens": ["Ägg", "Laktos", "Gluten"]
+      },
+      {
+        "id": 19,
+        "name": "Italian salad",
+        "type": "salad",
+        "description": "White pizza pan mayo, hawaiian platter party bbq sauce philly steak. Broccoli lasagna melted cheese peppers, pineapple hand tossed meatball beef marinara.",
+        "ingredients": [
+            "crisp lettuce",
+            "cucumber",
+            "tomatoes",
+            "olives",
+            "red onions",
+            "pepperoncinis",
+            "chicken",
+            "vinegrette dressing"
+        ],
+        "price": 139,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/no-image.png",
+        "allergens": ["Ägg"]
+    },
+    {
+        "id": 20,
+        "name": "Shrimp salad",
+        "type": "salad",
+        "description": "White pizza pan mayo, hawaiian platter party bbq sauce philly steak. Broccoli lasagna melted cheese peppers, pineapple hand tossed meatball beef marinara.",
+        "ingredients": [
+            "crisp lettuce",
+            "shrimp",
+            "cucumber",
+            "tomatoes",
+            "egg",
+            "mayonnaise dressing"
+        ],
+        "price": 139,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/no-image.png",
+        "allergens": ["Ägg", "Fisk", "Laktos", "Gluten"]
+    },
+      {
+        "id": 21,
+        "name": "Sprite",
+        "type": "drink",
+        "description": "Lorem ipsum dolor sit amet, bubbly fruity elit. Fizzy carbonated.",
+        "price": 23,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/no-image.png",
+        "allergens": []
+      },
+      {
+        "id": 22,
+        "name": "Fanta orange",
+        "type": "drink",
+        "description": "Lorem ipsum dolor sit amet, bubbly fruity elit. Fizzy carbonated.",
+        "price": 23,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/no-image.png",
+        "allergens": []
+      },
+      {
+        "id": 23,
+        "name": "Coca cola",
+        "type": "drink",
+        "description": "Lorem ipsum dolor sit amet, bubbly fruity elit. Fizzy carbonated.",
+        "price": 23,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/no-image.png",
+        "allergens": []
+    },
+    {
+        "id": 24,
+        "name": "Bubblewater",
+        "type": "drink",
+        "description": "Lorem ipsum dolor sit amet, bubbly fruity elit. Fizzy carbonated.",
+        "price": 23,
+        "imgUrl": "https://slajs-assets.s3.eu-north-1.amazonaws.com/no-image.png",
+        "allergens": []
+    }
+    ]
+  }
+  
