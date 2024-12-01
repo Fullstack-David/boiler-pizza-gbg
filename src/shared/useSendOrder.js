@@ -1,9 +1,9 @@
 import { ref } from 'vue';
 
-// Skicka beställning till API 
-export async function sendOrder() {
+export function sendOrder() {
 
     const orderConfirmation = ref({})
+    const orderConfirmed = ref(false)
 
     const postOrder = async (cartItems) => {
         if (cartItems.length === 0) {
@@ -11,7 +11,8 @@ export async function sendOrder() {
             return;
         }
         
-        orderConfirmation.value = {}
+        orderConfirmation.value = {};
+        orderConfirmed.value = false;
         const allIds = cartItems.map(item => item.id);
 
         try {
@@ -36,11 +37,12 @@ export async function sendOrder() {
             console.log('Order skickad!');
 
             orderConfirmation.value = responseData.order
+            orderConfirmed.value = true
 
         } catch (err) {
             console.error(err);
         }
     } 
 
-    return {orderConfirmation, postOrder};
+    return {orderConfirmation, orderConfirmed, postOrder};
 }

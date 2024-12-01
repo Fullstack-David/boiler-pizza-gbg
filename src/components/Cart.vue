@@ -2,8 +2,9 @@
 import { store } from '@/store/cart';
 import { ref, reactive, computed, toRaw } from 'vue';
 import { sendOrder } from '../shared/useSendOrder';
+import Order from './Order.vue';
 
-const { orderConfirmation, postOrder } = sendOrder();
+const { orderConfirmation, orderConfirmed, postOrder } = sendOrder();
 
 const cartItems = toRaw(store.cart);
 // const cartItems = reactive([]);
@@ -54,7 +55,10 @@ const sumOfCart = computed(() => {
             <p class="total-price">Totalpris: {{ sumOfCart }} SEK</p>
             <button class="order-btn" @click="postOrder(store.cart)">Skicka in min beställning</button>
         </div> 
-    <p>{{ orderConfirmation }}</p>
+        <div v-if="orderConfirmed">
+            <!-- HÄR KANSKE VI BORDE SKAPA EN KOMPONENT FÖR ORDERBBEKRÄFTELSE SOM VI KAN ÅTERANVÄNDA I ORDERHISTORY -->
+            <Order :order="orderConfirmation"/>
+        </div>
     </div>
 </template>
 
