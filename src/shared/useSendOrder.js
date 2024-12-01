@@ -1,6 +1,6 @@
 import { ref } from 'vue';
 
-// Skicka beställning till API 
+// Skicka beställning till API
 export async function sendOrder() {
 
     const orderConfirmation = ref({})
@@ -20,7 +20,7 @@ export async function sendOrder() {
             const response = await fetch(apiUrl, {
                 method: 'POST',
                 headers: {
-                    'x-zocom': import.meta.env.VITE_API_KEY_PIZZA_MENU,
+                    'x-zocom': import.meta.env.VITE_API_KEY,
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
@@ -34,15 +34,18 @@ export async function sendOrder() {
 
             if (!response.ok) throw new Error('Kunde inte skicka beställningen');
 
+            //////////////////////////////////////////////
+            // Vad är det tanken att detta ska åstadkomma?
             cartItems.length = 0;
             console.log('Order skickad!');
+            //////////////////////////////////////////////
 
             orderConfirmation.value = responseData.order
 
         } catch (err) {
             console.error(err);
         }
-    } 
+    }
 
     return {orderConfirmation, postOrder};
 }
