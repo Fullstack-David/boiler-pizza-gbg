@@ -21,9 +21,7 @@ export function useOrderHistory() {
         }
       );
       const data = await response.json();
-      console.log(data);
       orderItems.value = await data.orders;
-      console.log(data.orders);
     } catch (error) {
       console.log(error);
     } finally {
