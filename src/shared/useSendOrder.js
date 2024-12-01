@@ -6,21 +6,19 @@ export async function sendOrder() {
     const orderConfirmation = ref({})
 
     const postOrder = async (cartItems) => {
-         orderConfirmation.value = {}
+        if (cartItems.length === 0) {
+            console.warn("Ingen order att skicka.");
+            return;
+        }
+        
+        orderConfirmation.value = {}
+        const allIds = cartItems.map(item => item.id);
 
-         if (cartItems.length === 0) {
-             console.warn("Ingen order att skicka.");
-             return;
-         }
-
-         const allIds = cartItems.map(item => item.id);
-
-         const apiUrl = "https://6ldruff9ul.execute-api.eu-north-1.amazonaws.com/orders";
         try {
-            const response = await fetch(apiUrl, {
+            const response = await fetch("https://6ldruff9ul.execute-api.eu-north-1.amazonaws.com/orders", {
                 method: 'POST',
                 headers: {
-                    'x-zocom': import.meta.env.VITE_API_KEY_PIZZA_MENU,
+                    'x-zocom': import.meta.env.VITE_API_KEY,
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
