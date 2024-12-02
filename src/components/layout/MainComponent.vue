@@ -1,12 +1,12 @@
 <script setup>
 import { computed } from "vue";
 import { useFetchMenu } from "@/shared/useFetchMenu";
-import Menu from "./Menu.vue";
+import Menu from "../Menu.vue";
 
 const { menuItems, loading, error } = useFetchMenu();
 
 // computes
-const pizzas = computed(() => 
+const pizzas = computed(() =>
   menuItems.value.filter((item) => item.type === "pizza")
 );
 const salads = computed(() =>
@@ -78,4 +78,4 @@ h3 {
 .category-header {
   margin: 1rem 0;
 }
-</style>              
+</style>
