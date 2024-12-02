@@ -1,44 +1,10 @@
 <script setup>
 import { store } from '@/store/cart';
-import { ref, reactive, computed, toRaw } from 'vue';
 import { sendOrder } from '../shared/useSendOrder';
-
-const { orderConfirmation, postOrder } = sendOrder();
-
-const cartItems = toRaw(store.cart);
-// const cartItems = reactive([]);
-
-
-function removeFromCart(itemId) {
-    const index = store.cart.findIndex(item => item.id === itemId);
-    if (index !== -1) {
-        store.cart.splice(index, 1);
-    }
-}
-
-const sumOfCart = computed(() => {
-   return cartItems.reduce((total, item) => total + item.price, 0) || 0;
-    
-});
-
-
+import Order from './Order.vue';
+const { orderConfirmation, orderConfirmed, postOrder } = sendOrder();
 </script>
 
-<!-- <template>
-    <section>
-        <h2>Your Order</h2>
-        <ul>
-            <li v-for="item in items" :key="item.id">
-                <h3>{{ item.name }}</h3>
-                <p>{{ item.price }}:-</p>
-            </li>
-        </ul>
-        <p>Total:</p>
-        <button @click="sendOrder">Comfirm Order</button>
-    </section>
-</template>
-
-<style scoped></style> -->
 <template>
     <div class="cart-container">
         <h2>Kundvagn</h2>
@@ -46,17 +12,20 @@ const sumOfCart = computed(() => {
             <div class="cart-item">
                 <p class="item-name">{{ item.name }} </p>
                 <p class="item-price">{{ item.price }} SEK</p>
-                <button class="remove-btn" @click="removeFromCart(item.id)">Ta bort</button>
+                <button class="remove-btn" @click="store.removeFromCart(item.id)">Ta bort</button>
             </div>
         </div>
 
         <div class="total">
-            <p class="total-price">Totalpris: {{ sumOfCart }} SEK</p>
+            <p class="total-price">Totalpris: {{ store.sumOfCart }} SEK</p>
             <button class="order-btn" @click="postOrder(store.cart)">Skicka in min beställning</button>
         </div> 
-    <p>{{ orderConfirmation }}</p>
+        <div v-if="orderConfirmed">
+            <Order :order="orderConfirmation"/>
+        </div>
     </div>
 </template>
+
 
 <style scoped>
 .cart-container {

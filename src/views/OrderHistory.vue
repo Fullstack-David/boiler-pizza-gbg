@@ -1,5 +1,6 @@
 <script setup>
 import { useOrderHistory } from "@/shared/useOrderHistory";
+import Order from "@/components/Order.vue";
 
 const { orderItems, loading, error } = useOrderHistory();
 </script>
@@ -7,19 +8,7 @@ const { orderItems, loading, error } = useOrderHistory();
 <template>
   <main>
     <h1>Order History</h1>
-    <div class="order-items" v-for="order in orderItems" :key="order.id">
-      <p>Customer Number: {{ order.customerTel }}</p>
-      <p>Delivery time: {{ order.eta.slice(0, -8).replace("T", " ") }}</p>
-      <hr style="background-color: lightgray; width: 20%" />
-      <ul class="item-list">
-        <li v-for="item in order.items" :key="item.id">
-          {{ item.name }} {{ item.price }} kr
-        </li>
-      </ul>
-      <hr style="background-color: lightgray; width: 20%" />
-      <p>Order Value: {{ order.orderValue }} kr</p>
-      <p>Status: {{ order.state }}</p>
-    </div>
+    <Order v-for="order in orderItems" :key="order.id" :order="order"/>
   </main>
 </template>
 
@@ -29,19 +18,6 @@ main {
   flex-direction: column;
   gap: 10px;
   padding: 10px;
-}
-
-.order-items {
-  border: 1px solid lightgray;
-  border-radius: 10px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.item-list li {
-  list-style-type: none;
 }
 
 h1 {
